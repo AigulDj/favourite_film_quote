@@ -13,6 +13,12 @@ services:
       context: .
     ports:
       - 5000:5000
+    volumes:
+      - my-flask-app-volume:/app/images
+
+volumes:
+  my-flask-app-volume:
+
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
